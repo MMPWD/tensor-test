@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tensor HTML test by Mark Brown</title>
+<meta charset="UTF-8" />
+<style>
+body { font-family: arial;}
+
+header#page {
+    background-color:#343434;
+    color:#ffffff;
+	width:100%;
+	height:60px;
+    text-align:center;
+    padding:5px;
+	margin:0;
+}
+
+ul#nav {
+    line-height:30px;
+    background-color:#343434;
+    height:40px;
+    width:100%;
+    float:left;
+    padding:5px;
+	margin:0;
+}
+
+ul#nav li {
+  display: inline;  	 
+  margin: 0;
+  padding: 10px;
+  
+}
+
+ul#nav li:before { 
+  content: " ";
+}
+
+ul#nav li:first-child:before {
+  content: none;
+}
+ul#nav li:hover { 
+  background-color:#000000;
+  color:#ffffff;
+}
+
+a.topnav {
+  text-decoration:none;
+  color:#9d9d9d;
+}
+a.topnav:hover {
+  color:#ffffff;
+}
+header#main-section-head {
+  padding:50px;
+}
+
+div#wrapper {
+  float:left;
+  margin:0;
+  padding:0;
+  padding-left:5%;
+  padding-right:5%;
+  width:70%;
+}
+
+section header h1 {
+  font-size:48px;
+}
+
+article {
+    width:200px;
+    float:left;
+    padding:10px;
+    margin: 5px;
+    max-width: 200px;
+    height: 300px;
+}
+
+li.aside-link {
+  color:#000000;
+  list-style-type: none;
+  padding:5px;
+  padding-left:10px;
+  border-radius:2px;
+}
+li.aside-link:hover {
+  background-color:#337ab7;
+  color:#ffffff;
+}
+
+footer {
+    background-color:#343434;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+	width:100%;
+	height:100px;
+}
+label {
+  margin-right:10px;
+}
+</style>
+<script>
+/**
+* Function to grab the value of thinput element, convert to lower case, the split the string on nothing (ie every character
+* then reverse the order of the resultant array before joing it all back into a string again. The value is then returned back
+* to the form in a second field.
+*/
+function transform() {
+  var low = document.getElementById('textToTreat').value.toLowerCase().split('').reverse().join('');
+  document.getElementById('treatedtext').value = low;
+}
+
+
+
+</script>
+</head>
+
+<body>
+<header id='page'>&nbsp;</header>
+
+<ul id="nav">
+	  <li><a class='topnav' href='#'>Project Name</a></li>
+	  <li><a class='topnav' href='#'>Home</a></li>
+	  <li><a class='topnav' href='#'>About</a></li>
+	  <li><a class='topnav' href='#'>Contact</a></li>
+	</ul>
+
+<div id="wrapper">
+	<section>
+	  <header id='main-section-head'>
+		<h1>JS Test</h1>
+		<p>This page will take an input on the form and using HTML5 and a native function will convert all characters in the input string to lower case then return all the characters in reverse order and populate them in an output tag.</p>
+	  </header>
+	  <form action="#" >
+	    <label for="textToTreat">Input</label>
+		<input type="text" id="textToTreat" name="textToTreat" value="TIME"><br />
+		
+		<label for="treatedtext">Result</label>
+		<!-- Semantically correct HTML5 output tag -->
+		<output name="treatedtext" id="treatedtext" for="textToTreat"></output><br />
+		<button type="button" onclick='transform()';>Click Me!</button>
+	  </form>  
+	</section>
+</div>
+
+
+<div style="float:left;margin:0;padding:0;width:20%;">
+<aside>
+  <ul>
+    <li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+	<li class="aside-link">Link</li>
+  </ul>
+</aside> 
+</div>
+<footer>&nbsp;</footer>
+</body>
+
+</html> 
